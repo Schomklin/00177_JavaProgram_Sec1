@@ -1,0 +1,4 @@
+StudentID:00177
+Fullname(in English): Amonpan Chomklin
+AKA : 
+ClassDetail:Control Statement
