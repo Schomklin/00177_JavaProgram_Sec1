@@ -16,7 +16,7 @@ public class Lab_Example602_2 {
 		}
 		JOptionPane.showMessageDialog(null, (deptIsFound)
 				? dept +"was found in the list" 
-				: dept +"was not found in the list" ); 		
+				: dept +"was not found in the list" ); 	
 			
 	}
 
