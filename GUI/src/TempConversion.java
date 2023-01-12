@@ -38,6 +38,9 @@ public class TempConversion extends JFrame {
 		
 		CelsHandler celsiusHandler = new CelsHandler();
 		celsiusTF.addActionListener(celsiusHandler);
+		
+		FahrHandler fahrenheitHandle = new FahrHandler();
+		fahrenheitTF.addActionListener(fahrenheitHandle);
 
 		setSize(WIDTH, HEIGHT);
 		setVisible(true);
@@ -54,10 +57,19 @@ public class TempConversion extends JFrame {
 	
 	private class CelsHandler implements ActionListener{
 		public void actionPerformed(ActionEvent e) {
-			double celsius,fahenheit;
+			double celsius,fahrenheit;
 			celsius = Double.parseDouble(celsiusTF.getText());
-			fahenheit = celsius * CTOF + OFFSET;
-			fahrenheitTF.setText(String.format("%.2f",fahenheit));			
+			fahrenheit = celsius * CTOF + OFFSET;
+			fahrenheitTF.setText(String.format("%.2f",fahrenheit));			
+		}
+	}
+	
+	private class FahrHandler implements ActionListener{
+		public void actionPerformed(ActionEvent e) {
+			double celsius,fahrenheit;
+			fahrenheit = Double.parseDouble(fahrenheitTF.getText());
+			celsius = (fahrenheit-OFFSET) * FTOC ;
+			celsiusTF.setText(String.format("%.2f",celsius));			
 		}
 	}
 
